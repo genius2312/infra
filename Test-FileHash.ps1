@@ -5,7 +5,7 @@ function Test-FileHash{
         $md5
     )
     process{
-        $realvalue = (get-FileHash -path $filepath -algorithm md5).md5
+        $realvalue = (get-FileHash -path $filepath -algorithm md5).Hash
         return ($realvalue -eq $md5)
     }
 }
